@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div
+      class="min-h-screen w-full m-0 p-0 box-border overflow-x-none bg-white text-black pb-10" style="font-family: Inter;"
+    >
+      <!-- ========= NAVIGASI =================== -->
+      <nav class="h-16 sticky top-0 bg-white z-50 shadow-lg">
+        <div class="flex mx-auto items-center">
+          <!-- ========= LOGO ================ -->
+          <div class="pl-12 pt-2">
+            <img src="./Assets/logo.svg" />
+          </div>
+
+          <!-- ========== Menu ======== -->
+          <div class="flex items-center pt-2 pl-10 gap-10">
+            <a class="hover:text-blue-500" href="#">Home</a>
+            <div class="Dropdown1 relative group">
+              <a href="#" class="hover:text-blue-500">Jual Mobil</a>
+              <!-- ======  DROPDOWN -->
+              <div
+                class="absolute hidden group-hover:block bg-white shadow-md p-2 rounded-lg mt-2"
+              >
+                <a href="#" class="text-sm hover:bg-gray-100">pilihan 1</a>
+                <a href="#" class="text-sm hover:bg-gray-100">pilihan 2</a>
+              </div>
+            </div>
+            <div class="Dropdown2 relative group">
+              <a href="#" class="hover:text-blue-500">Beli Mobil</a>
+              <div
+                class="absolute hidden group-hover:block bg-white shadow-md p-2 rounded-lg mt-2"
+              >
+                <a href="#" class="text-sm hover:bg-gray-100">pilihan 1</a>
+                <a href="#" class="text-sm hover:bg-gray-100">pilihan 2</a>
+              </div>
+            </div>
+
+            <!-- ===== mesin pencarian =========== -->
+            <div
+              class="flex items-center rounded-full px-6 py-1 border"
+              style="background-color: #d2d3d4"
+            >
+              <input
+                type="text"
+                placeholder="search...."
+                class="outline-none rounded-full py-1 bg-white"
+                style="background-color: #d2d3d4"
+              />
+              <button class="bg-blue-500 rounded-full p-2 ml-2">
+                <img
+                  src="./Assets/logopencarian.svg"
+                  alt="Search Icon"
+                  class="w-4 h-4"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- =================== CAROUSEL ================ -->
+      <div class="relative w-full" style="height: 35rem">
+        <!-- Carousel Items -->
+        <div class="carousel w-full h-full relative">
+          <div id="slide1" class="carousel-item relative w-full">
+            <img src="./Assets/BMW M4 yellow1.svg" class="w-full " />
+            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+              <a href="#slide4" class="btn btn-circle">❮</a>
+              <a href="#slide2" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+      
+          <div id="slide2" class="carousel-item relative w-full">
+            <img src="./Assets/BMW M4 yellow2.jpg" class="w-full px-20" />
+            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+              <a href="#slide1" class="btn btn-circle">❮</a>
+              <a href="#slide3" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+      
+          <div id="slide3" class="carousel-item relative w-full">
+            <img src="./Assets/BMW M4 yellow3.jpg" class="w-full px-20" />
+            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+              <a href="#slide2" class="btn btn-circle">❮</a>
+              <a href="#slide4" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+      
+          <div id="slide4" class="carousel-item relative w-full">
+            <img src="./Assets/BMW M4 yellow4.jpg" class="w-full px-20" />
+            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+              <a href="#slide3" class="btn btn-circle">❮</a>
+              <a href="#slide1" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+        </div>
+      
+        <!-- ============== Paginasi SECTION ==================== -->
+        <div
+          class="absolute z-10 bottom-4 left-1/2 transform -translate-x-1/2 flex justify-center items-center backdrop-blur-lg p-2 rounded-full shadow-lg"
+        >
+          <div class="flex gap-4">
+            <a href="#slide1" class="w-16 h-16 flex justify-center items-center rounded-full bg-white shadow-md">
+              <img src="./Assets/BMW M4 yellow1.svg" class="w-14 h-14 object-cover rounded-full" alt="Slide 1" />
+            </a>
+            <a href="#slide2" class="w-16 h-16 flex justify-center items-center rounded-full bg-white shadow-md">
+              <img src="./Assets/BMW M4 yellow2.jpg" class="w-14 h-14 object-cover rounded-full" alt="Slide 2" />
+            </a>
+            <a href="#slide3" class="w-16 h-16 flex justify-center items-center rounded-full bg-white shadow-md">
+              <img src="./Assets/BMW M4 yellow3.jpg" class="w-14 h-14 object-cover rounded-full" alt="Slide 3" />
+            </a>
+            <a href="#slide4" class="w-16 h-16 flex justify-center items-center rounded-full bg-white shadow-md">
+              <img src="./Assets/BMW M4 yellow4.jpg" class="w-14 h-14 object-cover rounded-full" alt="Slide 4" />
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      
+
+      <!-- ========== MAIN SECTION ==================== -->
+      <div>
+        <div
+          class="breadcrumbs text-sm"
+          style="padding-left: 5rem; padding-top: 2rem"
+        >
+          <ul>
+            <li>
+              <a>
+                Home
+              </a>
+            </li>
+            <li>
+              <a>
+                Search
+              </a>
+            </li>
+            <li>
+              <span class="inline-flex items-center gap-2">            
+                Result
+              </span>
+            </li>
+            <li>
+              <span class="inline-flex items-center gap-2">
+                BMW
+              </span>
+            </li>
+              <li>
+                <span class="inline-flex items-center gap-2"> 
+                  4 Series  
+                </span>
+              </li>
+          </ul>
+        </div>
+        <div class="px-20">
+          <h1 class="text-3xl mb-6 font-semibold">2018 BMW M4 3.0 Coupe Yellow Edition</h1>
+          <div class="flex gap-2"> 
+            <h1 class="text-3xl font-bold mb-6">Rp 1,100,000,000</h1>
+            <div class="badge badge-primary badge-outline mt-3">Negotiable</div>
+          </div>
+         
+          <!-- metadata -->
+          <div
+            class="flex justify-between items-center p-4 bg-base-100 rounded-full shadow-sm"
+            style="background-color: #d2d3d4"
+          >
+            <div class="flex items-center space-x-2">
+              <div class="text-primary">
+                <!-- Kalender-->
+                <img src="./Assets/calendar.svg" alt="Like" class="h-5 w-5" />
+              </div>
+              <span class="text-sm text-gray-500">Published on 20/06/2024</span>
+            </div>
+
+            <div class="flex space-x-4">
+              <!-- Like icon -->
+              <button class="text-gray-500">
+                <img src="./Assets/like.svg" alt="Like" class="h-5 w-5" />
+              </button>
+
+              <!-- Share icon -->
+              <button class="text-gray-500">
+                <img src="./Assets/share.svg" alt="Share" class="h-5 w-5" />
+              </button>
+
+              <!-- More icon -->
+              <button class="text-gray-500">
+                <img
+                  src="./Assets/more.svg"
+                  alt="More options"
+                  class="h-5 w-5"
+                />
+              </button>
+            </div>
+          </div>
+         <!-- ==== card ============= -->
+         <div class="grid grid-cols-5 gap-4 mt-10 w-[54rem]">
+          <div class="card bg-[#d2d3d4] text-primary-content h-auto">
+            <div class="card-body">
+              <h2 class="card-title  text-gray-500">Kondisi</h2>
+              <p class="text-3xl font-semibold">Bekas</p>
+            </div>
+          </div>
+          <div class="card bg-[#d2d3d4] text-primary-content h-auto">
+            <div class="card-body">
+              <h2 class="card-title  text-gray-500">Tahun</h2>
+              <p class="text-3xl font-semibold">2008</p>
+            </div>
+          </div>
+          <div class="card bg-[#d2d3d4] text-primary-content h-auto">
+            <div class="card-body leading-relaxed">
+              <h2 class="card-title  text-gray-500">Odo</h2>
+              <p class="text-3xl font-semibold">20,000</p>
+            </div>
+          </div>
+          <div class="card bg-[#d2d3d4] text-primary-content h-auto">
+            <div class="card-body leading-relaxed">
+              <h2 class="card-title  text-gray-500">Warna</h2>
+              <p class="text-3xl font-semibold">Kuning</p>
+            </div>
+          </div>
+          <div class="card bg-[#d2d3d4] text-primary-content h-auto">
+            <div class="card-body leading-relaxed">
+              <h2 class="card-title  text-gray-500">Mesin</h2>
+              <p class="text-3xl font-semibold">1997cc</p>
+            </div>
+          </div>
+          <div class="card bg-[#d2d3d4] text-primary-content h-auto">
+            <div class="card-body leading-relaxed">
+              <h2 class="card-title  text-gray-500">Transmisi</h2>
+              <p class="text-3xl font-semibold">Auto</p>
+            </div>
+          </div>
+          <div class="card bg-[#d2d3d4] text-primary-content h-auto">
+            <div class="card-body leading-relaxed">
+              <h2 class="card-title text-gray-500">Pajak</h2>
+              <p class="text-3xl font-semibold">Hidup</p>
+            </div>
+          </div>
+          <div class="card bg-[#d2d3d4] text-primary-content h-auto">
+            <div class="card-body leading-relaxed">
+              <h2 class="card-title  text-gray-500">Seat</h2>
+              <p class="text-3xl font-semibold">5</p>
+            </div>
+          </div>
+        </div>
+        <div class="frame2 justify-center items-center w-auto p-4 rounded-lg h-[34rem] shadow-lg border-2 border-gray-300 bg-white mt-8 overflow-hidden">
+          <div role="tablist" class="tabs tabs-boxed rounded-full p-[1rem] bg-[#d2d3d4] gap-2">
+            <a id="tab-description" role="tab" class="tab cursor-pointer bg-white !rounded-full font-semibold " onclick="showContent('description')">Descriptions</a>
+            <a id="tab-technical" role="tab" class="tab tab-active cursor-pointer bg-white !rounded-full font-semibold" onclick="showContent('technical')">Technical Specifications</a>
+
+          </div>
+        
+          <!-- Content for Descriptions -->
+          <div id="content-description" class="content p-4 mt-4">
+            <h2 class="text-xl font-semibold">Description</h2>
+            <p>Spec :</p>
+            <ul>
+              <li>Odo 20K</li>
+              <li>Pajak bulan 10</li>
+              <li>NIK 2018</li>
+              <li>Yellow (Warna Favorite)</li>
+            </ul>
+            <br/>
+            <p>Feature Car :</p>
+            <ul>
+              <li>Speedometer 6WB Digital</li>
+              <li>Facelift / LCi luxury edition</li>
+              <li>Park sensor + Rear Camera</li>
+              <li>Ac dual Zone</li>
+              <li>Rear wheel drive</li>
+              <li>Widescreen LCD Display  </li>
+              <li>Auto start stop engine</li>
+              <li>Keyless entry</li>
+              <li>Auto Brake Hold</li>
+            </ul>
+
+          </div>
+        
+          <!-- Content for Technical Specifications -->
+          <div id="content-technical" class="content p-4 mt-4 h-full overflow-y-scroll">
+            <h2 class="text-xl font-semibold">Engine and Performance:</h2>
+            <ul>
+              <li>Engine Type: 3.0-liter BMW M TwinPower Turbo inline 6-cylinder</li>
+              <li>Horsepower: 425 hp at 5,500 - 7,300 rpm</li>
+              <li>Torque: 406 lb-ft at 1,850 - 5,500 rpm</li>
+              <li>0-60 mph: Approximately 4.1 seconds</li>
+              <li>Top Speed: Electronically limited to 155 mph</li>
+              <li>Transmission: 6-speed manual transmission (standard), 7-speed dual-clutch automatic transmission (optional) </li>
+              <li>Drivetrain: Rear-wheel drive (RWD)</li>
+            
+            </ul>
+            <br/>
+            <h2 class="text-xl font-semibold">Fuel Efficiency:</h2>
+            <ul>
+              <li>City: 17-18 mpg (miles per gallon)r</li>
+              <li>Highway: 24-26 mpg</li>
+              <li>Combined: Approximately 20-21 mpg</li>
+            </ul>
+            <br/>
+            <h2 class="text-xl font-semibold">Dimensions:</h2>
+            <ul>
+              <li>Length: 184.5 inches</li>
+              <li>Width: 73.6 inches</li>
+              <li>Height: 54.4 inches</li>
+              <li>Wheelbase: 110.7 inches</li>
+              <li>Curb Weight: Around 3,625 pounds (varies based on options)</li>
+            </ul>
+            <br/>
+            <h2 class="text-xl font-semibold">Interior Features:</h2>
+            <ul>
+              <li>Sports seats with Merino leather upholstery</li>
+              <li>M-specific steering wheel with paddle shifters (on automatic models)</li>
+              <li>Carbon fiber interior trim with black chrome accents</li>
+              <li>BMW iDrive system with a high-resolution display</li>
+              <li>Optional Harman Kardon or Bang & Olufsen surround sound system</li>
+            </ul>
+            <br/>
+            <h2 class="text-xl font-semibold">Safety and Driver Assistance:</h2>
+            <ul>
+              <li>Dynamic Stability Control (DSC) and Dynamic Traction Control (DTC)</li>
+              <li>Adaptive LED headlights and automatic high beams</li>
+              <li>Lane Departure Warning and Active Blind Spot Detection (optional)</li>
+              <li>Forward Collision Warning with Pedestrian Detection (optional)</li>
+            </ul>
+            
+
+          </div>
+        </div>
+        <!-- =======  bagian Profile ======= -->
+
+        <div class="frame3 flex items-center justify-between w-auto p-4 rounded-lg h-[6rem] shadow-lg border-2 border-gray-300 bg-white mt-8 overflow-hidden">
+          <div class="flex items-center gap-4">
+            <img src="./Assets/BMW M4 yellow1.svg" class="w-14 h-14 object-cover rounded-full" alt="BMW Motors Jakarta">
+            <h2 class="text-lg font-semibold">BMW Motors <br> Jakarta</h2> 
+          </div>
+          <div class="flex gap-4">
+            <div class="badge badge-grey badge-outline p-3 bg-[#d2d3d4]">Dealer</div>
+            <div class="badge badge-grey badge-outline p-3 bg-[#d2d3d4]">Terverifikasi</div>
+            <div class="badge badge-grey badge-outline p-3 bg-[#d2d3d4]">Jakarta Selatan</div>
+          </div>
+          <div class="flex gap-4 items-center">
+          <button class="rounded-full bg-[#d2d3d4] p-2 flex items-center justify-center">
+            <img src="./Assets/love.svg" alt="Love Icon">
+          </button>
+          <button class="px-8 py-[10px] rounded-full font-semibold text-white bg-blue-500">Contact</button>
+          </div>
+        </div>
+     </div>
+         
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function showContent(contentType) {
+      // Hide both content sections initially
+      document.getElementById('content-description').classList.add('hidden');
+      document.getElementById('content-technical').classList.add('hidden');
+  
+      // Remove the active state from both tabs
+      document.getElementById('tab-description').classList.remove('tab-active');
+      document.getElementById('tab-technical').classList.remove('tab-active');
+  
+      // Show the relevant content based on the selected tab
+      if (contentType === 'description') {
+        document.getElementById('content-description').classList.remove('hidden');
+        document.getElementById('tab-description').classList.add('tab-active');
+      } else if (contentType === 'technical') {
+        document.getElementById('content-technical').classList.remove('hidden');
+        document.getElementById('tab-technical').classList.add('tab-active');
+      }
+    }
+  </script>
+</html>
